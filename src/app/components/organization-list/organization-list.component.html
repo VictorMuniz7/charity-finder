@@ -1,0 +1,19 @@
+<app-search (searchData)="getSearchData($event)"></app-search>
+
+<div class="container">
+  <div class="org-card" *ngFor="let org of organizationArray">
+    <p class="org-title">{{ org.name }}</p>
+    <a [href]="org.url" target="_blank"><img [src]="org.logoUrl ? org.logoUrl : './assets/images/no-logo.png'" alt="Organization Logo" class="org-logo"></a>
+    <div class="org-address">
+      <p>{{ org.addressLine1 }}</p>
+      <p>{{ org.addressLine2 }}</p>
+    </div>
+    <p class="org-id"><b>{{ org.id }}</b></p>
+  </div>
+
+  <div class="loading-div" *ngIf="isLoading">
+    <div class="loading"></div>
+    <p>Searching for more organizations...</p>
+  </div>
+
+</div>

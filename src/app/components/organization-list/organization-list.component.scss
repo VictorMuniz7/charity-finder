@@ -1,0 +1,116 @@
+.container{
+  width: 100%;
+  margin-bottom: 12em;
+}
+
+.org-card{
+  width: 95%;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5em;
+  margin: 1em auto;
+  background-color: var(--full-white);
+  box-shadow: inset 0 -5em 3em rgba(#53e7c3, 0.6);
+  border: .2em solid black;
+  overflow: hidden;
+}
+
+.org-title{
+  font-size: 2.2em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.org-logo{
+  width: 10em;
+  border: .2em solid black;
+  box-shadow: .5em .5em 1.5em rgba(#000, 0.8);
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.org-address{
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.loading-div{
+  margin: .2em 0 .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.loading{
+  width: 5em;
+  height: 5em;
+  border: 1em solid black;
+  border-top-color: var(--turquoise);
+  border-radius: 50%;
+  animation: loading .75s ease infinite;
+}
+
+@keyframes loading {
+  from{
+    transform: rotate(0turn);
+  }
+
+  to{
+    transform: rotate(1turn);
+  }
+}
+
+@media screen and (min-width: 45em) {
+
+  .org-card{
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 62em) {
+
+  .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .loading-div{
+    position: absolute;
+    bottom: -10em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    p{
+      font-size: 1.4em;
+    }
+  }
+
+  .org-card{
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 82em) {
+
+  .org-card{
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 90em) {
+
+  .org-card{
+    width: 30%;
+  }
+}
+

@@ -1,0 +1,26 @@
+<div class="search-section">
+  <h2>Choose How Your Donation Makes a Difference</h2>
+  <p>We believe that giving is personal and meaningful. We recognize that everyone has their own specific causes and concerns. That's why we give you the flexibility to choose how your actions make a difference. Here are some ways you can customize your actions:</p>
+  <p><b>Organization Name:</b> If you already have a specific organization in mind that you want to support, simply enter their name in the search bar. Our system will locate the corresponding organization so that you can proceed with your donation in a simple and direct way.</p>
+  <p><b>Organization Country of Origin:</b> If you have a preference for supporting organizations from a specific country, our country of origin search function will allow you to locate those that share your nationality or origin of interest. This allows you to connect with organizations that have a strong link to your community or cultural heritage.</p>
+  <p><b>Countries Served by Organization:</b> For those who want to support organizations that have a global or specific reach in certain regions, our "countries served" search offers the opportunity to find organizations that target their efforts in specific geographic areas. This ensures your donations make a direct impact where it matters most.</p>
+
+
+
+  <div class="search-box">
+    <h3>Choose the organization</h3>
+    <form class="search" [formGroup]="form">
+      <div class="input-div">
+        <input type="text" placeholder="Type here..." formControlName="search" [style.borderColor]="form.invalid && form.dirty ? 'red' : 'transparent'">
+        <p class="error" *ngIf="form.invalid && form.dirty">Required field</p>
+      </div>
+
+      <select formControlName="criteria">
+        <option value="name">Organization name</option>
+        <option value="country">Home country</option>
+        <option value="countries">Countries served</option>
+      </select>
+    </form>
+    <button (click)="getOrganizations()" [disabled]="form.invalid">Search</button>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+header{
+  width: 100%;
+  height: 7em;
+  background-color: var(--turquoise);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img{
+    width: 8em;
+  }
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: .4em;
+}
+
+.title-1, .title-2{
+  font-family: 'Lalezar', sans-serif;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1em;
+  letter-spacing: 2px;
+}
+
+.title-1{
+  font-size: 3.2em;
+}
+
+.title-2{
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 37em) {
+
+  .title-1{
+    font-size: 3.8em;
+  }
+
+  .title-2{
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (min-width: 45em) {
+
+  .title{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .title-1, .title-2{
+    font-size: 4.5em;
+    line-height: 0;
+  }
+
+  .title-1{
+    margin-right: .3em;
+  }
+}
+
+@media screen and (min-width: 62em) {
+
+  header{
+    position: relative;
+
+    img{
+      width: 11em;
+      position: absolute;
+      background-color: var(--turquoise);
+      border-radius: 50%;
+      left: 50%;
+      top: -1.5em;
+      transform: translateX(-50%);
+    }
+  }
+
+  .title{
+    width: 100%;
+    gap: 13em;
+  }
+
+  .title-2{
+    margin-right: .65em;
+  }
+
+}
+
